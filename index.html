@@ -6,66 +6,96 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Melhores criativos · junho a agosto de 2026</title>
 <style>
+:root{--bg:#f4f6f3;--card:#fff;--linha:#e4e9e1;--tinta:#1f2a1e;--tinta2:#5f6d5b;
+      --verde:#4a7c43;--verde-claro:#eef4ec}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Segoe UI",Arial,sans-serif;background:#f7f7f7;color:#2b2b2b;
-     padding:28px 18px 48px;-webkit-text-size-adjust:100%}
-.wrap{max-width:900px;margin:0 auto}
-header{margin-bottom:22px}
-.org{font-size:11px;font-weight:700;letter-spacing:2px;color:#8a8a8a;text-transform:uppercase}
-h1{margin-top:6px;font-size:25px;font-weight:800;line-height:1.2}
-.sub{margin-top:8px;font-size:14px;color:#6b6b6b;line-height:1.5;max-width:620px}
+body{font-family:"Segoe UI",system-ui,Arial,sans-serif;background:var(--bg);color:var(--tinta);
+     padding:26px 16px 46px;-webkit-text-size-adjust:100%}
+.wrap{max-width:960px;margin:0 auto}
+.org{font-size:10.5px;font-weight:700;letter-spacing:2.4px;color:#8a9787;text-transform:uppercase}
+.kicker{margin-top:14px;font-size:11px;font-weight:800;letter-spacing:2.4px;color:var(--verde);
+        text-transform:uppercase}
+h1.client{margin-top:5px;font-size:30px;font-weight:800;letter-spacing:-.4px;line-height:1.15}
+.periodo{margin-top:5px;font-size:14px;font-weight:600;color:var(--tinta2)}
+.voltar{display:inline-block;margin-bottom:16px;font-size:12.5px;font-weight:700;color:var(--verde);
+        text-decoration:none}
+.voltar:hover{text-decoration:underline}
+.linhas{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.linha{display:grid;grid-template-columns:212px 1fr;gap:20px;align-items:center;background:var(--card);
+       border:1px solid var(--linha);border-radius:14px;padding:16px}
+.thumb{display:flex;align-items:center;justify-content:center;height:212px;border-radius:10px;
+       background:#f7f9f6;overflow:hidden}
+.thumb img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.thumb .vazio{width:100%;height:100%;border:1px dashed var(--linha);border-radius:10px;display:flex;
+              align-items:center;justify-content:center;color:#a9b8a4;font-size:10px;letter-spacing:1px;
+              text-transform:uppercase;text-align:center;padding:8px}
+.mes{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;
+     color:var(--verde);background:var(--verde-claro);border-radius:999px;padding:3px 11px}
+.ad{margin-top:10px;font-size:17px;font-weight:800;line-height:1.3}
+.sub{margin-top:4px;font-size:12.5px;color:var(--tinta2);line-height:1.45}
+.metrics{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.metric{background:#f7f9f6;border-radius:10px;padding:10px 8px;text-align:center}
+.metric .lbl{font-size:9.5px;font-weight:700;letter-spacing:.6px;color:#7b8a78;text-transform:uppercase;
+             min-height:24px;display:flex;align-items:center;justify-content:center;line-height:1.25}
+.metric .num{margin-top:3px;font-size:19px;font-weight:800;color:#31462e;letter-spacing:-.3px}
+.metric .note{margin-top:2px;font-size:10px;color:#93a58f}
+.cta{margin-top:13px;font-size:13px;font-weight:700}
+.cta a{color:var(--verde);text-decoration:none;border-bottom:1.5px solid #c9dcc4;padding-bottom:1px}
+.cta a:hover{border-color:var(--verde)}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--linha);font-size:12px;color:#9aa897}
+/* index */
 .grid{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid #e6e6e6;
-      border-radius:10px;padding:16px 18px;text-decoration:none;color:inherit;
-      transition:border-color .15s}
-.card:hover{border-color:#bfbfbf}
-.card .nome{font-size:15px;font-weight:700;line-height:1.3}
-.card .meses{font-size:12px;color:#7a7a7a}
-.card .abrir{margin-top:8px;font-size:12.5px;font-weight:700;color:#2f6b2f}
-footer{margin-top:34px;padding-top:14px;border-top:1px solid #e6e6e6;
-       font-size:12px;color:#9a9a9a}
-@media(max-width:640px){
-  body{padding:20px 14px 40px}
-  h1{font-size:21px}
+.card{display:flex;flex-direction:column;gap:3px;background:var(--card);border:1px solid var(--linha);
+      border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:#b9cdb4;transform:translateY(-1px)}
+.card .nome{font-size:15.5px;font-weight:700;line-height:1.3}
+.card .meses{font-size:12.5px;color:var(--tinta2)}
+.card .abrir{margin-top:9px;font-size:12.5px;font-weight:800;color:var(--verde)}
+@media(max-width:680px){
+  body{padding:18px 14px 36px}
+  h1.client{font-size:23px}
+  .linha{grid-template-columns:1fr;gap:14px;padding:14px}
+  .thumb{height:250px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .ad{font-size:15.5px}
+  .metric .num{font-size:18px}
   .grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="org">EcoHub Digital</div>
-    <h1>Melhores criativos · junho a agosto de 2026</h1>
-    <p class="sub">Um PDF por cliente, com o melhor anúncio de cada mês e as métricas de
-    alcance, mensagens, custo por mensagem e investimento.</p>
-  </header>
-  <div class="grid">
-    <a class="card" href="a-movelar-pesqueira.pdf" target="_blank" rel="noopener"><div class="nome">A Movelar Pesqueira</div><div class="meses">julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="bellar-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Bellar Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="bibi-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Bibi Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="casa-dos-colchoes-araras.pdf" target="_blank" rel="noopener"><div class="nome">Casa dos Colchões Araras</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="casa-dos-colchoes-rio-claro.pdf" target="_blank" rel="noopener"><div class="nome">Casa dos Colchões Rio Claro</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="central-dos-eletrons.pdf" target="_blank" rel="noopener"><div class="nome">Central dos Eletrons</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="centrolar-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Centrolar Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="cida-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Cida Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="confort-maison-campina-grande.pdf" target="_blank" rel="noopener"><div class="nome">Confort Maison - Campina Grande</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="confort-maison-caruaru.pdf" target="_blank" rel="noopener"><div class="nome">Confort Maison - Caruaru</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="fabio-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Fábio Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="i-s-moveis-e-lar.pdf" target="_blank" rel="noopener"><div class="nome">I.S Móveis e Lar</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="jonema-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Jonema Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="lojas-super-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Lojas Super Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="luna-colchoes.pdf" target="_blank" rel="noopener"><div class="nome">Luna Colchões</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="livia-colchoes.pdf" target="_blank" rel="noopener"><div class="nome">Lívia Colchões</div><div class="meses">julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="maxcarlos.pdf" target="_blank" rel="noopener"><div class="nome">MaxCarlos</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="mianova-decor.pdf" target="_blank" rel="noopener"><div class="nome">Mianova Decor</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="miranda-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Miranda Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="moveis-cambui.pdf" target="_blank" rel="noopener"><div class="nome">Móveis Cambui</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="paulino-moveis.pdf" target="_blank" rel="noopener"><div class="nome">Paulino Moveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="sevan-atakarejo.pdf" target="_blank" rel="noopener"><div class="nome">Sevan Atakarejo</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="th-casa.pdf" target="_blank" rel="noopener"><div class="nome">TH Casa</div><div class="meses">agosto de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-    <a class="card" href="ultra-moveis-bolivia.pdf" target="_blank" rel="noopener"><div class="nome">Ultra Móveis Bolívia</div><div class="meses">junho de 2026</div><div class="abrir">Abrir PDF &rarr;</div></a>
-  </div>
-  <footer>Gestão de tráfego pago para o varejo · 24 clientes</footer>
+<div class="org">EcoHub Digital</div>
+<div class="kicker">Junho a agosto de 2026</div>
+<h1 class="client">Melhores criativos</h1>
+<div class="periodo">Um por cliente, com o melhor anúncio de cada mês</div>
+<div class="grid">
+    <a class="card" href="a-movelar-pesqueira.html"><div class="nome">A Movelar Pesqueira</div><div class="meses">julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="bellar-moveis.html"><div class="nome">Bellar Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="bibi-moveis.html"><div class="nome">Bibi Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="casa-dos-colchoes-araras.html"><div class="nome">Casa dos Colchões Araras</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="casa-dos-colchoes-rio-claro.html"><div class="nome">Casa dos Colchões Rio Claro</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="central-dos-eletrons.html"><div class="nome">Central dos Eletrons</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="centrolar-moveis.html"><div class="nome">Centrolar Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="cida-moveis.html"><div class="nome">Cida Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="confort-maison-caruaru.html"><div class="nome">Confort Maison - Caruaru</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="confort-maison-campina-grande.html"><div class="nome">Confort Maison | Campina Grande</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="fabio-moveis.html"><div class="nome">Fábio Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="i-s-moveis-e-lar.html"><div class="nome">I.S Móveis e Lar</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="jonema-moveis.html"><div class="nome">Jonema Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="lojas-super-moveis.html"><div class="nome">Lojas Super Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="luna-colchoes.html"><div class="nome">Luna Colchões</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="livia-colchoes.html"><div class="nome">Lívia Colchões</div><div class="meses">julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="maxcarlos.html"><div class="nome">MaxCarlos</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="mianova-decor.html"><div class="nome">Mianova Decor</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="miranda-moveis.html"><div class="nome">Miranda Móveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="moveis-cambui.html"><div class="nome">Móveis Cambui</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="paulino-moveis.html"><div class="nome">Paulino Moveis</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="sevan-atakarejo.html"><div class="nome">Sevan Atakarejo</div><div class="meses">junho, julho e agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="th-casa.html"><div class="nome">TH Casa</div><div class="meses">agosto de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+    <a class="card" href="ultra-moveis-bolivia.html"><div class="nome">Ultra Móveis Bolívia</div><div class="meses">junho de 2026</div><div class="abrir">Ver online &rarr;</div></a>
+</div>
+<footer>Alcance, mensagens, custo por mensagem e investimento · 24 clientes</footer>
 </div>
 </body>
 </html>
